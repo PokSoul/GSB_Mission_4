@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace GSB_Mission_4
 {
@@ -18,5 +19,14 @@ namespace GSB_Mission_4
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ConnexionSql connect = new ConnexionSql();
+
+            String login = System.Convert.ToString(loginText.Text);
+            String password = System.Convert.ToString(mdpText.Text);
+
+            connect.Login(login, password);
+        }
     }
 }
