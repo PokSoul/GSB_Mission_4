@@ -12,9 +12,11 @@ namespace GSB_Mission_4
 {
     public partial class Form1 : Form
     {
+        ConnexionSql sqlVisiteur = new ConnexionSql();
         public Form1()
         {
             InitializeComponent();
         }
+
     }
 }
