@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 
 namespace GSB_Mission_4
 {
@@ -11,14 +12,17 @@ namespace GSB_Mission_4
     /// </summary>
     class GestionDate
     {
+
+        DateTime date = DateTime.Now;
+
         /// <summary>
         /// Permet d'obtenir le mois courant
         /// </summary>
         /// <param name="date"></param>
         /// <returns> Le mois courant en chaîne de caractère </returns>
-        public string getCurrentMonth(DateTime date)
+        public int currentMonth()
         {
-            return date.Month.ToString();
+            return date.Month;
         }
 
         /// <summary>
@@ -26,10 +30,17 @@ namespace GSB_Mission_4
         /// </summary>
         /// <param name="date"></param>
         /// <returns> Le mois précédent en chaîne de caractère </returns>
-        public string getPreviousMonth(DateTime date)
+        public int previousMonth()
         {
-            var previousMonth = date.Month - 1;
-            return previousMonth.ToString();
+            int previousMonth;
+
+            if (date.Month == 1)
+                previousMonth = 12;
+            else
+                previousMonth = date.Month - 1;
+
+
+            return previousMonth;
         }
 
         /// <summary>
@@ -37,10 +48,25 @@ namespace GSB_Mission_4
         /// </summary>
         /// <param name="date"></param>
         /// <returns> Le mois suivant en chaîne de caractère </returns>
-        public string getNextMonth(DateTime date)
+        public int nextMonth()
         {
-            var nextMonth = date.Month + 1;
-            return nextMonth.ToString();
+            int nextMonth;
+
+            if (date.Month == 12)
+                nextMonth = 1;
+            else
+                nextMonth = date.Month + 1;
+
+            return nextMonth;
+        }
+
+        /// <summary>
+        /// Permet d'obtenir l'année courante
+        /// </summary>
+        /// <returns> L'année courante </returns>
+        public int getYear()
+        {
+            return date.Year;
         }
     }
 }

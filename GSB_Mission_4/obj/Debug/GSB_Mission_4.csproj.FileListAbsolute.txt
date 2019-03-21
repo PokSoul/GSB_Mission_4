@@ -12,4 +12,15 @@ F:\PPE\Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.csproj.GenerateResource.C
 F:\PPE\Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.exe
 F:\PPE\Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.pdb
 F:\PPE\Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.csprojResolveAssemblyReference.cache
+<<<<<<< HEAD
 F:\PPE\Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.ProjectInstaller.resources
+=======
+C:\Maxime_Dubost\GSB\GSB_Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.exe
+C:\Maxime_Dubost\GSB\GSB_Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.pdb
+C:\Maxime_Dubost\GSB\GSB_Mission_4\GSB_Mission_4\bin\Debug\MySql.Data.dll
+C:\Maxime_Dubost\GSB\GSB_Mission_4\GSB_Mission_4\bin\Debug\MySql.Data.xml
+C:\Maxime_Dubost\GSB\GSB_Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.csprojResolveAssemblyReference.cache
+C:\Maxime_Dubost\GSB\GSB_Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.Form1.resources
+C:\Maxime_Dubost\GSB\GSB_Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.Properties.Resources.resources
+C:\Maxime_Dubost\GSB\GSB_Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.csproj.GenerateResource.Cache
+>>>>>>> 8cf3438d9423bbf8e84ee24c38bb631feff1db04
