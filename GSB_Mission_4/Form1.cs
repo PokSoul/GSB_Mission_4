@@ -15,6 +15,7 @@ namespace GSB_Mission_4
     {
         ConnexionSql connect;
         DataTable dt = new DataTable();
+
         public Form1()
         {
             InitializeComponent();
@@ -24,59 +25,39 @@ namespace GSB_Mission_4
         {
             connect = ConnexionSql.getInstance("10.30.0.113", "DUBOST", "DUBOST", "mdubost");
             connect.openConnection();
-            afficher();
-            
+            afficher();  
         }
 
         public void afficher()
         {
-
             MySqlCommand oCom = connect.reqExec("select * from fichefrais");
-
-
             MySqlDataReader reader = oCom.ExecuteReader();
-
-
-
-
             for (int i = 0; i <= reader.FieldCount - 1; i++)
             {
                 dt.Columns.Add(reader.GetName(i));
-
             }
-
 
             while (reader.Read())
             {
-
-
                 DataRow dr = dt.NewRow();
+
                 for (int i = 0; i <= reader.FieldCount - 1; i++)
                 {
                     dr[i] = reader.GetValue(i);
                 }
 
                 dt.Rows.Add(dr);
-
-
-
             }
 
             // pour mettre la table sur un datagridView :
             dataGridView1.DataSource = dt;
-
             reader.Close();
-
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            MySqlCommand req = connect.reqExec("");
+            MySqlCommand req = connect.reqExec("SELECT mois FROM fichefrais WHERE id = {0}");
             MySqlDataReader reader = req.ExecuteReader();
-
-
-
-
         }
     }
 }
