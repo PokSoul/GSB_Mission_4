@@ -4,51 +4,116 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Windows.Forms;
+
 
 namespace GSB_Mission_4
 {
     class ConnexionSql
     {
-        public bool Login(string username, string password)
+        // Variable locale pour stocker une référence vers l'instance
+        private static ConnexionSql connection = null;
+
+        private MySqlConnection mySqlCn;
+
+        private static readonly object mylock = new object();
+
+
+
+
+        private ConnexionSql(string unProvider, string uneDataBase, string unUid, string unMdp)
         {
-            MySqlConnection con = new MySqlConnection("host=localhost;username=DUBOST;password=mdubost;database=DUBOST");
-            MySqlCommand cmd = new MySqlCommand("SELECT * FROM visiteur WHERE login='" + username + "' and mdp='" + password + ";");
 
-            cmd.Connection = con;
 
-            con.Open(); // Here is the line where I got this message >> Unable to connect to any of the specified MySQL hosts.
-
-            MySqlDataReader reader = cmd.ExecuteReader();
-
-            if (reader.Read() != false)
+            try
             {
-
-                if (reader.IsDBNull(0) == true)
+                string connString;
+                connString = "SERVER=" + unProvider + ";" + "DATABASE=" +
+                uneDataBase + ";" + "User ID=" + unUid + ";" + "PASSWORD=" + unMdp + ";";
+                try
                 {
-                    cmd.Connection.Close();
-                    reader.Dispose();
-                    cmd.Dispose();
-                    return false;
+                    mySqlCn = new MySqlConnection(connString);
                 }
-
-                else
+                catch (Exception emp)
                 {
-
-                    cmd.Connection.Close();
-
-                    reader.Dispose();
-                    cmd.Dispose();
-                    return true;
+                    MessageBox.Show(emp.Message);
                 }
-
+            }
+            catch (Exception emp)
+            {
+                MessageBox.Show(emp.Message);
             }
 
-            else
-            {
-                return false;
-            }
+
 
         }
+
+
+
+        /**
+         * méthode de création d'une instance de connexion si elle n'existe pas (singleton)
+         */
+        public static ConnexionSql getInstance(string unProvider, string uneDataBase, string unUid, string unMdp)
+        {
+
+            lock ((mylock))
+            {
+
+                try
+                {
+
+
+                    if (null == connection)
+                    { // Premier appel
+                        connection = new ConnexionSql(unProvider, uneDataBase, unUid, unMdp);
+                    }
+                }
+                catch (Exception emp)
+                {
+                    MessageBox.Show(emp.Message);
+                }
+                return connection;
+
+            }
+        }
+
+
+
+
+
+        /**
+         * Ouverture de la connexion
+         */
+        public void openConnection()
+        {
+            try
+            {
+                mySqlCn.Open();
+            }
+            catch (Exception emp)
+            {
+                MessageBox.Show(emp.Message);
+            }
+        }
+
+        /**
+         * Fermeture de la connexion
+         */
+        public void closeConnection()
+        {
+            mySqlCn.Close();
+        }
+
+        /**
+         * Exécutiuon d'une requête
+         */
+        public MySqlCommand reqExec(string req)
+        {
+            MySqlCommand mysqlCom = new MySqlCommand(req, this.mySqlCn);
+            return (mysqlCom);
+        }
+
+
 
     }
 }
