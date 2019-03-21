@@ -4,7 +4,6 @@ F:\PPE\Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.exe
 F:\PPE\Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.pdb
 F:\PPE\Mission_4\GSB_Mission_4\bin\Debug\MySql.Data.dll
 F:\PPE\Mission_4\GSB_Mission_4\bin\Debug\MySql.Data.xml
-F:\PPE\Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.csprojResolveAssemblyReference.cache
 F:\PPE\Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.Form1.resources
 F:\PPE\Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.Properties.Resources.resources
 F:\PPE\Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.csproj.GenerateResource.Cache
