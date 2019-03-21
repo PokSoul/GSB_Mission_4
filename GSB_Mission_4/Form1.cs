@@ -59,5 +59,12 @@ namespace GSB_Mission_4
             MySqlCommand req = connect.reqExec("SELECT mois FROM fichefrais WHERE id = {0}");
             MySqlDataReader reader = req.ExecuteReader();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = dataGridView1.CurrentCell.RowIndex;
+            int j = dataGridView1.CurrentCell.ColumnIndex;
+            MessageBox.Show(dataGridView1[j, i].Value.ToString());
+        }
     }
 }

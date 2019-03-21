@@ -24,3 +24,4 @@ C:\Maxime_Dubost\GSB\GSB_Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.Form1.r
 C:\Maxime_Dubost\GSB\GSB_Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.Properties.Resources.resources
 C:\Maxime_Dubost\GSB\GSB_Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.csproj.GenerateResource.Cache
 >>>>>>> 8cf3438d9423bbf8e84ee24c38bb631feff1db04
+C:\Maxime_Dubost\GSB\GSB_Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.ProjectInstaller.resources
