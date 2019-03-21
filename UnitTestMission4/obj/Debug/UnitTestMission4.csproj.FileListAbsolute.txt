@@ -4,3 +4,10 @@ F:\PPE\Mission_4\UnitTestMission4\bin\Debug\Microsoft.VisualStudio.QualityTools.
 F:\PPE\Mission_4\UnitTestMission4\bin\Debug\fr\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
 F:\PPE\Mission_4\UnitTestMission4\obj\Debug\UnitTestMission4.dll
 F:\PPE\Mission_4\UnitTestMission4\obj\Debug\UnitTestMission4.pdb
+C:\Maxime_Dubost\GSB\GSB_Mission_4\UnitTestMission4\bin\Debug\UnitTestMission4.dll
+C:\Maxime_Dubost\GSB\GSB_Mission_4\UnitTestMission4\bin\Debug\UnitTestMission4.pdb
+C:\Maxime_Dubost\GSB\GSB_Mission_4\UnitTestMission4\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Maxime_Dubost\GSB\GSB_Mission_4\UnitTestMission4\bin\Debug\fr\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+C:\Maxime_Dubost\GSB\GSB_Mission_4\UnitTestMission4\obj\Debug\UnitTestMission4.csprojResolveAssemblyReference.cache
+C:\Maxime_Dubost\GSB\GSB_Mission_4\UnitTestMission4\obj\Debug\UnitTestMission4.dll
+C:\Maxime_Dubost\GSB\GSB_Mission_4\UnitTestMission4\obj\Debug\UnitTestMission4.pdb
