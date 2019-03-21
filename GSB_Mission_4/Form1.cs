@@ -56,10 +56,6 @@ namespace GSB_Mission_4
                     dr[i] = reader.GetValue(i);
                 }
 
-                /* dr[0] = reader.GetString(0);
-                 dr[1] = reader.GetString(1);
-                 dr[2] = reader.GetString(2);*/
-
                 dt.Rows.Add(dr);
 
 
@@ -73,5 +69,14 @@ namespace GSB_Mission_4
 
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            MySqlCommand req = connect.reqExec("");
+            MySqlDataReader reader = req.ExecuteReader();
+
+
+
+
+        }
     }
 }
