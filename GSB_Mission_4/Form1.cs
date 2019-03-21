@@ -31,7 +31,7 @@ namespace GSB_Mission_4
         public void afficher()
         {
 
-            MySqlCommand oCom = connect.reqExec("select * from visiteur");
+            MySqlCommand oCom = connect.reqExec("select * from fichefrais");
 
 
             MySqlDataReader reader = oCom.ExecuteReader();
