@@ -9,3 +9,5 @@ F:\PPE\Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.Properties.Resources.reso
 F:\PPE\Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.csproj.GenerateResource.Cache
 F:\PPE\Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.exe
 F:\PPE\Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.pdb
+C:\Maxime_Dubost\GSB\GSB_Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.exe
+C:\Maxime_Dubost\GSB\GSB_Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.pdb

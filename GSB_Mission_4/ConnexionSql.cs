@@ -6,25 +6,17 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
-
 namespace GSB_Mission_4
 {
     class ConnexionSql
     {
         // Variable locale pour stocker une référence vers l'instance
         private static ConnexionSql connection = null;
-
         private MySqlConnection mySqlCn;
-
         private static readonly object mylock = new object();
-
-
-
 
         private ConnexionSql(string unProvider, string uneDataBase, string unUid, string unMdp)
         {
-
-
             try
             {
                 string connString;
@@ -43,28 +35,20 @@ namespace GSB_Mission_4
             {
                 MessageBox.Show(emp.Message);
             }
-
-
-
         }
-
-
 
         /**
          * méthode de création d'une instance de connexion si elle n'existe pas (singleton)
          */
         public static ConnexionSql getInstance(string unProvider, string uneDataBase, string unUid, string unMdp)
         {
-
             lock ((mylock))
             {
-
                 try
                 {
-
-
                     if (null == connection)
-                    { // Premier appel
+                    { 
+                        // Premier appel
                         connection = new ConnexionSql(unProvider, uneDataBase, unUid, unMdp);
                     }
                 }
@@ -72,14 +56,10 @@ namespace GSB_Mission_4
                 {
                     MessageBox.Show(emp.Message);
                 }
-                return connection;
 
+                return connection;
             }
         }
-
-
-
-
 
         /**
          * Ouverture de la connexion
@@ -112,9 +92,5 @@ namespace GSB_Mission_4
             MySqlCommand mysqlCom = new MySqlCommand(req, this.mySqlCn);
             return (mysqlCom);
         }
-
-
-
     }
 }
-    
