@@ -11,3 +11,4 @@ F:\PPE\Mission_4\UnitTestMission4\bin\Debug\Microsoft.VisualStudio.QualityTools.
 F:\PPE\Mission_4\UnitTestMission4\bin\Debug\fr\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
 F:\PPE\Mission_4\UnitTestMission4\obj\Debug\UnitTestMission4.dll
 F:\PPE\Mission_4\UnitTestMission4\obj\Debug\UnitTestMission4.pdb
+F:\PPE\Mission_4\UnitTestMission4\obj\Debug\UnitTestMission4.csprojResolveAssemblyReference.cache

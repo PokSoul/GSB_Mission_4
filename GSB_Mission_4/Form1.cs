@@ -53,30 +53,34 @@ namespace GSB_Mission_4
             // pour mettre la table sur un datagridView :
             dataGridView1.DataSource = dt;
             reader.Close();
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             try
             {
-                connect.openConnection();
+              connect.openConnection();
 
                 GestionDate gd = new GestionDate();
                 MySqlCommand msc;
 
-                if (Convert.ToInt16(gd.currentDay()) == 10)
+                if (/*Convert.ToInt16(gd.currentDay()) == 10*/true)
                 {
                     msc = connect.reqExec("UPDATE fichefrais SET idEtat = 'CL' WHERE mois = " + gd.currentYear() + gd.previousMonth());
                     msc.ExecuteNonQuery();
+                    afficher();
+
                 }
 
                 if (Convert.ToInt16(gd.currentDay()) == 20)
                 {
                     msc = connect.reqExec("UPDATE fichefrais SET idEtat = 'RB' WHERE mois = " + gd.currentYear() + gd.previousMonth());
                     msc.ExecuteNonQuery();
+                    afficher();
                 }
 
-                Show();
+                
             }
             catch (Exception ex)
             {
