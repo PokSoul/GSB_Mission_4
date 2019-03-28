@@ -68,11 +68,24 @@ namespace GSB_Mission_4
         {
             try
             {
-                mySqlCn.Open();
+                if (mySqlCn.State == System.Data.ConnectionState.Closed)
+                {
+
+
+                    mySqlCn.Open();
+                  
+
+                }
+
+
+               
+
+              
             }
             catch (Exception emp)
             {
                 MessageBox.Show(emp.Message);
+              
             }
         }
 
@@ -81,7 +94,12 @@ namespace GSB_Mission_4
          */
         public void closeConnection()
         {
-            mySqlCn.Close();
+            if (mySqlCn.State == System.Data.ConnectionState.Open)
+            {
+
+                mySqlCn.Close();
+
+            }
         }
 
         /**

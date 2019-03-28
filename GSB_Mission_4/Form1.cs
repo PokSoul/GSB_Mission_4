@@ -14,7 +14,7 @@ namespace GSB_Mission_4
     public partial class Form1 : Form
     {
         ConnexionSql connect;
-        DataTable dt = new DataTable();
+       
 
         public Form1()
         {
@@ -24,13 +24,17 @@ namespace GSB_Mission_4
         private void Form1_Load(object sender, EventArgs e)
         {
             connect = ConnexionSql.getInstance("10.30.0.113", "DUBOST", "DUBOST", "mdubost");
-            connect.openConnection();
+            
             afficher();
-            connect.closeConnection();
+         
         }
 
         public void afficher()
         {
+
+            connect.closeConnection();
+            connect.openConnection();
+            DataTable dt = new DataTable();
             MySqlCommand oCom = connect.reqExec("select * from fichefrais");
             MySqlDataReader reader = oCom.ExecuteReader();
             for (int i = 0; i <= reader.FieldCount - 1; i++)
@@ -53,6 +57,8 @@ namespace GSB_Mission_4
             // pour mettre la table sur un datagridView :
             dataGridView1.DataSource = dt;
             reader.Close();
+
+            connect.closeConnection();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -60,30 +66,35 @@ namespace GSB_Mission_4
             try
             {
                 connect.openConnection();
+                 
 
                 GestionDate gd = new GestionDate();
                 MySqlCommand msc;
 
-                if (Convert.ToInt16(gd.currentDay()) == 10)
+                if(/*Convert.ToInt16(gd.currentDay()) == 10*/true)
                 {
                     msc = connect.reqExec("UPDATE fichefrais SET idEtat = 'CL' WHERE mois = " + gd.currentYear() + gd.previousMonth());
                     msc.ExecuteNonQuery();
+                    connect.closeConnection();
                 }
 
                 if (Convert.ToInt16(gd.currentDay()) == 20)
                 {
                     msc = connect.reqExec("UPDATE fichefrais SET idEtat = 'RB' WHERE mois = " + gd.currentYear() + gd.previousMonth());
                     msc.ExecuteNonQuery();
+                    connect.closeConnection();
+               
                 }
 
-                Show();
+                connect.closeConnection();
+                afficher();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
 
-            connect.closeConnection();
+          
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
