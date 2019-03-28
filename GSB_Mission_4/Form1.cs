@@ -14,7 +14,7 @@ namespace GSB_Mission_4
     public partial class Form1 : Form
     {
         ConnexionSql connect;
-       
+
 
         public Form1()
         {
@@ -24,9 +24,9 @@ namespace GSB_Mission_4
         private void Form1_Load(object sender, EventArgs e)
         {
             connect = ConnexionSql.getInstance("10.30.0.113", "DUBOST", "DUBOST", "mdubost");
-            
+
             afficher();
-         
+
         }
 
         public void afficher()
@@ -66,12 +66,12 @@ namespace GSB_Mission_4
             try
             {
                 connect.openConnection();
-                 
+
 
                 GestionDate gd = new GestionDate();
                 MySqlCommand msc;
 
-                if(/*Convert.ToInt16(gd.currentDay()) == 10*/true)
+                if (/*Convert.ToInt16(gd.currentDay()) == 10*/true)
                 {
                     msc = connect.reqExec("UPDATE fichefrais SET idEtat = 'CL' WHERE mois = " + gd.currentYear() + gd.previousMonth());
                     msc.ExecuteNonQuery();
@@ -83,18 +83,18 @@ namespace GSB_Mission_4
                     msc = connect.reqExec("UPDATE fichefrais SET idEtat = 'RB' WHERE mois = " + gd.currentYear() + gd.previousMonth());
                     msc.ExecuteNonQuery();
                     connect.closeConnection();
-               
+
                 }
 
                 connect.closeConnection();
                 afficher();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
 
-          
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
