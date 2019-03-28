@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace GSB_Mission_4
 {
-    class ConnexionSql
+    public class ConnexionSql
     {
         // Variable locale pour stocker une référence vers l'instance
         private static ConnexionSql connection = null;
