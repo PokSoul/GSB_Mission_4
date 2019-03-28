@@ -11,7 +11,7 @@ namespace GSB_Mission_4
     /// Classe de gestion des dates permettant d'obtenir
     /// le jour, le mois ou l'année courant(e), suivant(e) ou précédent(e).
     /// </summary>
-    class GestionDate
+    public class GestionDate
     {
         DateTime date = DateTime.Now;
 
