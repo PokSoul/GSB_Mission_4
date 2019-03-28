@@ -5,10 +5,23 @@ C:\Maxime_Dubost\GSB\GSB_Mission_4\UnitTestMission4\bin\Debug\fr\Microsoft.Visua
 C:\Maxime_Dubost\GSB\GSB_Mission_4\UnitTestMission4\obj\Debug\UnitTestMission4.csprojResolveAssemblyReference.cache
 C:\Maxime_Dubost\GSB\GSB_Mission_4\UnitTestMission4\obj\Debug\UnitTestMission4.dll
 C:\Maxime_Dubost\GSB\GSB_Mission_4\UnitTestMission4\obj\Debug\UnitTestMission4.pdb
+<<<<<<< HEAD
+C:\Maxime_Dubost\Git\UnitTestMission4\bin\Debug\UnitTestMission4.dll
+C:\Maxime_Dubost\Git\UnitTestMission4\bin\Debug\UnitTestMission4.pdb
+C:\Maxime_Dubost\Git\UnitTestMission4\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Maxime_Dubost\Git\UnitTestMission4\bin\Debug\fr\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+C:\Maxime_Dubost\Git\UnitTestMission4\obj\Debug\UnitTestMission4.csprojResolveAssemblyReference.cache
+C:\Maxime_Dubost\Git\UnitTestMission4\obj\Debug\UnitTestMission4.dll
+C:\Maxime_Dubost\Git\UnitTestMission4\obj\Debug\UnitTestMission4.pdb
+=======
 F:\PPE\Mission_4\UnitTestMission4\bin\Debug\UnitTestMission4.dll
 F:\PPE\Mission_4\UnitTestMission4\bin\Debug\UnitTestMission4.pdb
 F:\PPE\Mission_4\UnitTestMission4\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 F:\PPE\Mission_4\UnitTestMission4\bin\Debug\fr\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
 F:\PPE\Mission_4\UnitTestMission4\obj\Debug\UnitTestMission4.dll
 F:\PPE\Mission_4\UnitTestMission4\obj\Debug\UnitTestMission4.pdb
+<<<<<<< HEAD
 F:\PPE\Mission_4\UnitTestMission4\obj\Debug\UnitTestMission4.csprojResolveAssemblyReference.cache
+=======
+>>>>>>> 3f6f95ba1fddd272be3df6d30e0027b72e1b994e
+>>>>>>> 9b1b4b91f55f94d510679ce6d088b0d7d32d3106
