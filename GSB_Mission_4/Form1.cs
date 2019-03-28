@@ -25,7 +25,8 @@ namespace GSB_Mission_4
         {
             connect = ConnexionSql.getInstance("10.30.0.113", "DUBOST", "DUBOST", "mdubost");
             connect.openConnection();
-            afficher();  
+            afficher();
+            connect.closeConnection();
         }
 
         public void afficher()
@@ -56,8 +57,33 @@ namespace GSB_Mission_4
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            MySqlCommand req = connect.reqExec("SELECT mois FROM fichefrais WHERE id = {0}");
-            MySqlDataReader reader = req.ExecuteReader();
+            try
+            {
+                connect.openConnection();
+
+                GestionDate gd = new GestionDate();
+                MySqlCommand msc;
+
+                if (Convert.ToInt16(gd.currentDay()) == 10)
+                {
+                    msc = connect.reqExec("UPDATE fichefrais SET idEtat = 'CL' WHERE mois = " + gd.currentYear() + gd.previousMonth());
+                    msc.ExecuteNonQuery();
+                }
+
+                if (Convert.ToInt16(gd.currentDay()) == 20)
+                {
+                    msc = connect.reqExec("UPDATE fichefrais SET idEtat = 'RB' WHERE mois = " + gd.currentYear() + gd.previousMonth());
+                    msc.ExecuteNonQuery();
+                }
+
+                Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            connect.closeConnection();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
