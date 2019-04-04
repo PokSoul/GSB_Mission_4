@@ -40,7 +40,24 @@ namespace UnitTestMission4
         public void previousMonth()
         {
 
+            string dateString;
+            if (date.Month == 1)
+                dateString = "12";
+            else
+                dateString = Convert.ToString(date.Month - 1);
+
             
+            if (date.Month <= 9)
+            {
+                dateString = "0" + Convert.ToString(dateString);
+            }
+            else
+            {
+                dateString = Convert.ToString(date.Month);
+            }
+
+            Assert.AreEqual(gd.previousMonth(), dateString);
+
         }
 
 
@@ -49,7 +66,9 @@ namespace UnitTestMission4
         public void currentYear()
         {
 
-            
+      
+
+            Assert.AreEqual(gd.currentYear(), Convert.ToString(date.Year));
         }
 
     }
