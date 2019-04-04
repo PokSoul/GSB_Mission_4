@@ -37,3 +37,15 @@ C:\Maxime_Dubost\Git\GSB_Mission_4\obj\Debug\GSB_Mission_4.Form1.resources
 C:\Maxime_Dubost\Git\GSB_Mission_4\obj\Debug\GSB_Mission_4.ProjectInstaller.resources
 C:\Maxime_Dubost\Git\GSB_Mission_4\obj\Debug\GSB_Mission_4.Properties.Resources.resources
 C:\Maxime_Dubost\Git\GSB_Mission_4\obj\Debug\GSB_Mission_4.csproj.GenerateResource.Cache
+C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.exe.config
+C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.exe
+C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.pdb
+C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.exe
+C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.pdb
+C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\bin\Debug\MySql.Data.dll
+C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\bin\Debug\MySql.Data.xml
+C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.csprojResolveAssemblyReference.cache
+C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.Form1.resources
+C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.Properties.Resources.resources
+C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.ServiceGSB.resources
+C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\obj\Debug\GSB_Mission_4.csproj.GenerateResource.Cache

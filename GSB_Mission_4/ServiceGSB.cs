@@ -7,40 +7,50 @@ using System.Linq;
 using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
-using System.Timers;
+using MySql.Data.MySqlClient;
 
 namespace GSB_Mission_4
 {
     partial class ServiceGSB : ServiceBase
     {
+        ConnexionSql connect;
+
         public ServiceGSB()
         {
             InitializeComponent();
-
-            eventLog1 = new EventLog();
-            if (!EventLog.SourceExists("MySource"))
-            {
-                EventLog.CreateEventSource("MySource", "MyNewLog");
-            }
-            eventLog1.Source = "MySource";
-            eventLog1.Log = "MyNewLog";
+            connect = ConnexionSql.getInstance("10.30.0.113", "DUBOST", "DUBOST", "mdubost");
         }
 
         protected override void OnStart(string[] args)
         {
             // TODO: ajoutez ici le code pour démarrer votre service.
-            eventLog1.WriteEntry("In OnStart");
-
-            // Set up a timer that triggers every minute.
-            Timer timer = new Timer();
-            timer.Interval = 60000; // 60 seconds
-            timer.Elapsed += new ElapsedEventHandler(this.OnTimer);
-            timer.Start();
         }
 
         protected override void OnStop()
         {
             // TODO: ajoutez ici le code pour effectuer les destructions nécessaires à l'arrêt de votre service.
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            connect.openConnection();
+
+            GestionDate gd = new GestionDate();
+            MySqlCommand msc;
+
+            if (/*Convert.ToInt16(gd.currentDay()) == 10*/true)
+            {
+                msc = connect.reqExec("UPDATE fichefrais SET idEtat = 'CL' WHERE mois = " + gd.currentYear() + gd.previousMonth());
+                msc.ExecuteNonQuery();
+            }
+
+            if (Convert.ToInt16(gd.currentDay()) == 20)
+            {
+                msc = connect.reqExec("UPDATE fichefrais SET idEtat = 'RB' WHERE mois = " + gd.currentYear() + gd.previousMonth());
+                msc.ExecuteNonQuery();
+            }
+
+            connect.closeConnection();
         }
     }
 }

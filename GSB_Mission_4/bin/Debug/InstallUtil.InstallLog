@@ -1,0 +1,82 @@
+﻿
+Exécution d'une installation traitée avec transaction.
+
+Début de la phase d'installation de l'installation.
+Consultez le contenu du fichier journal pour l'avancement de l'assembly C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.exe.
+Le fichier se trouve à C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.InstallLog.
+
+Une exception s'est produite lors de la phase d'installation.
+System.ComponentModel.Win32Exception: Le mappage entre les noms de compte et les ID de sécurité n’a pas été effectué
+
+La phase de restauration de l'installation a commencé.
+Consultez le contenu du fichier journal pour l'avancement de l'assembly C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.exe.
+Le fichier se trouve à C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.InstallLog.
+
+La phase de restauration est terminée.
+
+L'installation traitée avec transaction est terminée.
+
+Exécution d'une installation traitée avec transaction.
+
+Début de la phase d'installation de l'installation.
+Consultez le contenu du fichier journal pour l'avancement de l'assembly C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.exe.
+Le fichier se trouve à C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.InstallLog.
+
+Une exception s'est produite lors de la phase d'installation.
+System.InvalidOperationException: L'utilisateur a annulé l'installation des services dans l'exécutable C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.exe.
+
+La phase de restauration de l'installation a commencé.
+Consultez le contenu du fichier journal pour l'avancement de l'assembly C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.exe.
+Le fichier se trouve à C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.InstallLog.
+
+La phase de restauration est terminée.
+
+L'installation traitée avec transaction est terminée.
+
+Exécution d'une installation traitée avec transaction.
+
+Début de la phase d'installation de l'installation.
+Consultez le contenu du fichier journal pour l'avancement de l'assembly C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.exe.
+Le fichier se trouve à C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.InstallLog.
+
+Une exception s'est produite lors de la phase d'installation.
+System.ComponentModel.Win32Exception: Le nom de compte n’est pas valide ou n’existe pas, ou le mot de passe n’est pas valide pour le nom de compte spécifié
+
+La phase de restauration de l'installation a commencé.
+Consultez le contenu du fichier journal pour l'avancement de l'assembly C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.exe.
+Le fichier se trouve à C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.InstallLog.
+
+La phase de restauration est terminée.
+
+L'installation traitée avec transaction est terminée.
+
+Exécution d'une installation traitée avec transaction.
+
+Début de la phase d'installation de l'installation.
+Consultez le contenu du fichier journal pour l'avancement de l'assembly C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.exe.
+Le fichier se trouve à C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.InstallLog.
+
+Une exception s'est produite lors de la phase d'installation.
+System.InvalidOperationException: L'utilisateur a annulé l'installation des services dans l'exécutable C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.exe.
+
+La phase de restauration de l'installation a commencé.
+Consultez le contenu du fichier journal pour l'avancement de l'assembly C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.exe.
+Le fichier se trouve à C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.InstallLog.
+
+La phase de restauration est terminée.
+
+L'installation traitée avec transaction est terminée.
+
+Exécution d'une installation traitée avec transaction.
+
+Début de la phase d'installation de l'installation.
+Consultez le contenu du fichier journal pour l'avancement de l'assembly C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.exe.
+Le fichier se trouve à C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.InstallLog.
+
+La phase d'installation est terminée et la phase de validation a commencé.
+Consultez le contenu du fichier journal pour l'avancement de l'assembly C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.exe.
+Le fichier se trouve à C:\Maxime_Dubost\Git\GSB_Mission_4\GSB_Mission_4\bin\Debug\GSB_Mission_4.InstallLog.
+
+La phase de validation est terminée.
+
+L'installation traitée avec transaction est terminée.
