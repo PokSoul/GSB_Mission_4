@@ -9,7 +9,7 @@ namespace GSB_Mission_4
 {
     /// <summary>
     /// Classe de gestion des dates permettant d'obtenir
-    /// le jour, le mois ou l'année courant(e), suivant(e) ou précédent(e).
+    /// le jour, le mois ou l'année courant(e), suivant(e) ou précédent(e)
     /// </summary>
     public class GestionDate
     {
@@ -150,7 +150,7 @@ namespace GSB_Mission_4
         /// <summary>
         /// Permet d'obtenir l'année précédente
         /// </summary>
-        /// <returns> L'année courante </returns>
+        /// <returns> L'année précédente </returns>
         public string previousYear()
         {
             return Convert.ToString(date.Year - 1);
@@ -159,7 +159,7 @@ namespace GSB_Mission_4
         /// <summary>
         /// Permet d'obtenir l'année suivante
         /// </summary>
-        /// <returns> L'année courante </returns>
+        /// <returns> L'année suivante </returns>
         public string nextYear()
         {
             return Convert.ToString(date.Year + 1);

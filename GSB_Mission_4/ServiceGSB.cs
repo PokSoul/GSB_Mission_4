@@ -11,26 +11,40 @@ using MySql.Data.MySqlClient;
 
 namespace GSB_Mission_4
 {
+    /// <summary>
+    /// Service Windows de l'application GSB
+    /// </summary>
     partial class ServiceGSB : ServiceBase
     {
         ConnexionSql connect;
 
+        /// <summary>
+        /// Constructeur du service (initialisation des composants et de la connexion)
+        /// </summary>
         public ServiceGSB()
         {
             InitializeComponent();
             connect = ConnexionSql.getInstance("10.30.0.113", "DUBOST", "DUBOST", "mdubost");
+            /* +---------+-------------+-----------------+
+               |         | Lycée       | Maison          |
+               +---------+-------------+-----------------+
+               | Adresse | 10.30.0.113 | slam.siolms.pro |
+               +---------+-------------+-----------------+ */
         }
 
         protected override void OnStart(string[] args)
         {
-            // TODO: ajoutez ici le code pour démarrer votre service.
         }
 
         protected override void OnStop()
         {
-            // TODO: ajoutez ici le code pour effectuer les destructions nécessaires à l'arrêt de votre service.
         }
 
+        /// <summary>
+        /// Minuteur du service permettant d'effectuer les requêtes à interval régulier et donné
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void timer1_Tick(object sender, EventArgs e)
         {
             connect.openConnection();
@@ -38,15 +52,20 @@ namespace GSB_Mission_4
             GestionDate gd = new GestionDate();
             MySqlCommand msc;
 
-            if (/*Convert.ToInt16(gd.currentDay()) == 10*/true)
+            if (Convert.ToInt16(gd.currentDay()) == 10)
             {
-                msc = connect.reqExec("UPDATE fichefrais SET idEtat = 'CL' WHERE mois = " + gd.currentYear() + gd.previousMonth());
+                msc = connect.reqExec(@"UPDATE fichefrais
+                                        SET idEtat = 'CL'
+                                        WHERE mois = " + gd.currentYear() + gd.previousMonth());
                 msc.ExecuteNonQuery();
             }
 
             if (Convert.ToInt16(gd.currentDay()) == 20)
             {
-                msc = connect.reqExec("UPDATE fichefrais SET idEtat = 'RB' WHERE mois = " + gd.currentYear() + gd.previousMonth());
+                msc = connect.reqExec(@"UPDATE fichefrais
+                                        SET idEtat = 'RB'
+                                        WHERE idEtat = 'VA'
+                                        AND mois = " + gd.currentYear() + gd.previousMonth());
                 msc.ExecuteNonQuery();
             }
 
